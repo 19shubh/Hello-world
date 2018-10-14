@@ -1,7 +1,5 @@
 #include <iostream>
-
 using namespace std;
-
 int getPivot(int input[],int start,int end){
   int pivot = input[start];
   int i = start;
@@ -11,7 +9,6 @@ int getPivot(int input[],int start,int end){
     if(i<j){
         input[i] = input[j];
     }
-
     while(i<j && input[++i]<=pivot);
     if(i<j){
         input[j] = input[i];
@@ -27,9 +24,7 @@ void quickSort(int input[],int start,int end){
     int partitionIndex = getPivot(input,start,end);
     quickSort(input,start,partitionIndex-1);
     quickSort(input,partitionIndex+1,end);
-
 }
-
 int main()
 {
     cout<<"Om Kumar"<<endl;
@@ -40,6 +35,5 @@ int main()
     for(int i=0;i<end;i++){
         cout<<input[i]<<" ";
     }
-
     return 0;
 }
